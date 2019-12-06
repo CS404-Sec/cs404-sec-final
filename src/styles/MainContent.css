@@ -1,0 +1,15 @@
+.wapper{
+    margin:0;
+   padding:20px;
+   max-width: 100%; 
+   background-color: red;
+}
+
+#leftSide{
+    float: left;
+}
+
+#rightSide{
+    float: right;
+    
+}
