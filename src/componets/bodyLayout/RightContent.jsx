@@ -3,6 +3,9 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
 export default class RightContent extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <Fragment>
@@ -14,6 +17,7 @@ export default class RightContent extends Component {
         >
           <Paper className="paperL">top right</Paper>
           <Paper className="paperL">bottom right</Paper>
+          {this.props.data ? <div>{this.props.data.nam}</div> : null}
         </Grid>
       </Fragment>
     );

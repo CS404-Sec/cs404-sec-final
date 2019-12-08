@@ -10,8 +10,14 @@ export default class MainContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //   date: new Date()
+      data: null
     };
+    this.setMainData = this.setMainData.bind(this);
+  }
+
+  setMainData(newData) {
+    console.log(newData);
+    this.setState({ data: newData });
   }
 
   render() {
@@ -22,10 +28,10 @@ export default class MainContent extends Component {
 
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <LeftContent></LeftContent>
+            <LeftContent setMainData={this.setMainData}></LeftContent>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <RightContent></RightContent>
+            <RightContent data={this.state.data}></RightContent>
           </Grid>
         </Grid>
       </Fragment>
