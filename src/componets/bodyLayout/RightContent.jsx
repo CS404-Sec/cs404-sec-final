@@ -15,9 +15,17 @@ export default class RightContent extends Component {
           justify="space-evenly"
           alignItems="stretch"
         >
-          <Paper className="paperL">top right</Paper>
-          <Paper className="paperL">bottom right</Paper>
-          {this.props.data ? <div>{this.props.data.nam}</div> : null}
+          <Paper
+            style={{ fontWeight: "bold", textAlign: "center" }}
+            className="paperL"
+          >
+            English Comment of the Time Period
+          </Paper>
+          {this.props.data ? (
+            <Paper style={{ textAlign: "center", padding: "10px" }}>
+              {this.props.data}
+            </Paper>
+          ) : null}
         </Grid>
       </Fragment>
     );

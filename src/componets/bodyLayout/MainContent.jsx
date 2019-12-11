@@ -16,7 +16,6 @@ export default class MainContent extends Component {
   }
 
   setMainData(newData) {
-    console.log(newData);
     this.setState({ data: newData });
   }
 
